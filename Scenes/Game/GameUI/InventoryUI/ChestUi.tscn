@@ -1,0 +1,65 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/Main/Game/GameUI/InventoryUI/InventoryUi.cs" type="Script" id=2]
+[ext_resource path="res://Fonts/Pixeltype.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 24
+outline_color = Color( 0.713726, 0.819608, 0.815686, 1 )
+font_data = ExtResource( 3 )
+
+[node name="ChestUi" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+_slotParentNodePath = NodePath("../ChestUi/ColorRect/VBoxContainer/GridContainer")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -128.0
+margin_top = -58.0
+margin_right = 128.0
+margin_bottom = 58.0
+rect_min_size = Vector2( 128, 64 )
+size_flags_horizontal = 2
+size_flags_vertical = 2
+color = Color( 0.109804, 0.121569, 0.211765, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ColorRect/VBoxContainer"]
+margin_right = 256.0
+margin_bottom = 16.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.843137, 0.909804, 0.933333, 1 )
+text = "CHEST"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="ColorRect/VBoxContainer"]
+margin_top = 20.0
+margin_right = 256.0
+margin_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_constants/vseparation = 2
+custom_constants/hseparation = 2
+columns = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}

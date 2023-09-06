@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://Sprites/Seeds.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Main/Game/Database/ItemResource.cs" type="Script" id=2]
+[ext_resource path="res://Scenes/Game/World/Farming/Crops/Crop.tscn" type="PackedScene" id=4]
+
+[resource]
+script = ExtResource( 2 )
+itemName = "Seed"
+itemId = 0
+stackable = true
+stackAmount = 1
+maxStackSize = 99
+energyBoostAmount = 0
+itemType = 1
+iconTexture = ExtResource( 1 )
+cropPackedScene = ExtResource( 4 )

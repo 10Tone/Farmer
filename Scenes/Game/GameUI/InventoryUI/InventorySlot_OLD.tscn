@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/Main/Game/GameUI/InventoryUI/InventorySlot.cs" type="Script" id=1]
+[ext_resource path="res://Fonts/Pixeltype.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 9
+font_data = ExtResource( 2 )
+
+[node name="InventorySlot_OLD" type="TextureButton"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 23.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 16, 16 )
+expand = true
+stretch_mode = 2
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+_stackAmountLabelNodePath = NodePath("../InventorySlot_OLD/StackAmount")
+
+[node name="StackAmount" type="Label" parent="."]
+margin_right = 38.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 1 )
+text = "99"
+[connection signal="button_down" from="." to="." method="_on_InventorySlot_button_down"]

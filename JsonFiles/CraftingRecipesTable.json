@@ -1,0 +1,46 @@
+{
+  "ChestRecipe":
+  {
+    "Materials":
+    [
+      {
+        "MaterialItem": "Wood", "MaterialAmount": 12
+      }
+
+    ],
+    "Result": "Chest"
+  },
+
+  "StoneOvenRecipe":
+  {
+    "Materials":
+    [
+      {
+        "MaterialItem": "Wood", "MaterialAmount": 4
+      },
+      {
+        "MaterialItem": "Stone", "MaterialAmount": 20
+      }
+
+    ],
+    "Result": "StoneOven"
+  },
+
+  "ChickenCoopRecipe":
+  {
+    "Materials":
+    [
+      {
+        "MaterialItem": "Wood", "MaterialAmount": 200
+      },
+      {
+        "MaterialItem": "Stone", "MaterialAmount": 40
+      },
+      {
+        "MaterialItem": "Iron", "MaterialAmount": 4
+      }
+
+    ],
+    "Result": "StoneOven"
+  }
+}

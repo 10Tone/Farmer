@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Fonts/PixelTypeFont_8p_Light.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Scripts/Main/Game/GameUI/InventoryUI/CraftingMenu/CraftingMaterialAmountInfo.cs" type="Script" id=2]
+
+[node name="MaterialHBoxContainer" type="HBoxContainer"]
+margin_top = 17.0
+margin_right = 69.0
+margin_bottom = 27.0
+rect_min_size = Vector2( 0, 8 )
+custom_constants/separation = 3
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+_iconNodePath = NodePath("Icon")
+_labelNeedAmountNodePath = NodePath("NeededAmount")
+_labelInventoryAmountNodePath = NodePath("InventoryAmount")
+
+[node name="Icon" type="TextureRect" parent="."]
+margin_right = 10.0
+margin_bottom = 10.0
+rect_min_size = Vector2( 10, 10 )
+expand = true
+
+[node name="NeededAmount" type="Label" parent="."]
+margin_left = 13.0
+margin_top = 2.0
+margin_right = 39.0
+margin_bottom = 8.0
+rect_min_size = Vector2( 26, 0 )
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.94902, 0.941176, 0.898039, 1 )
+text = "99"
+
+[node name="InventoryAmount" type="Label" parent="."]
+margin_left = 42.0
+margin_top = 2.0
+margin_right = 68.0
+margin_bottom = 8.0
+rect_min_size = Vector2( 26, 0 )
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.94902, 0.941176, 0.898039, 1 )
+text = "99"

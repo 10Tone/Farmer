@@ -1,0 +1,70 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scenes/Game/World/TileMaps/TileMaps.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Game/World/Farming/Crops/CropsManager.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Game/World/Collectibles/Collectibles.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scripts/Main/Game/FarmWorld/FarmWorldManager.cs" type="Script" id=4]
+[ext_resource path="res://Scenes/Game/World/Collectibles/Collectible.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Game/World/Interactibles/Tree.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scripts/Main/Game/Interactibles/InteractiblesManager.cs" type="Script" id=7]
+
+[node name="FarmWorld" type="Node2D"]
+script = ExtResource( 4 )
+_tileMapManagerNodePath = NodePath("TileMaps")
+_cropsManagerNodePath = NodePath("CropsManager")
+_collectiblesManagerNodePath = NodePath("Collectibles")
+_interactiblesManagerNodePath = NodePath("Interactibles")
+
+[node name="TileMaps" parent="." instance=ExtResource( 1 )]
+
+[node name="CropsManager" parent="." instance=ExtResource( 2 )]
+z_index = 5
+
+[node name="Collectibles" parent="." instance=ExtResource( 3 )]
+
+[node name="Collectible" parent="Collectibles" instance=ExtResource( 5 )]
+position = Vector2( 200, 48 )
+_resourceRefName = "Seed"
+
+[node name="Collectible2" parent="Collectibles" instance=ExtResource( 5 )]
+position = Vector2( 104, 32 )
+_resourceRefName = "Seed"
+
+[node name="Collectible3" parent="Collectibles" instance=ExtResource( 5 )]
+position = Vector2( 80, 120 )
+_resourceRefName = "Seed"
+
+[node name="Collectible4" parent="Collectibles" instance=ExtResource( 5 )]
+position = Vector2( 144, 128 )
+_resourceRefName = "Seed"
+
+[node name="Collectible5" parent="Collectibles" instance=ExtResource( 5 )]
+position = Vector2( 192, 96 )
+_resourceRefName = "Seed"
+
+[node name="Interactibles" type="Node2D" parent="."]
+script = ExtResource( 7 )
+
+[node name="Tree" parent="Interactibles" instance=ExtResource( 6 )]
+position = Vector2( 40, 40 )
+z_index = 2
+
+[node name="Tree2" parent="Interactibles" instance=ExtResource( 6 )]
+position = Vector2( 152, 40 )
+z_index = 2
+
+[node name="Tree3" parent="Interactibles" instance=ExtResource( 6 )]
+position = Vector2( -40, 112 )
+z_index = 2
+
+[node name="Tree4" parent="Interactibles" instance=ExtResource( 6 )]
+position = Vector2( 8, 96 )
+z_index = 2
+
+[node name="Tree5" parent="Interactibles" instance=ExtResource( 6 )]
+position = Vector2( 272, 104 )
+z_index = 2
+
+[node name="Tree6" parent="Interactibles" instance=ExtResource( 6 )]
+position = Vector2( 232, -24 )
+z_index = 2

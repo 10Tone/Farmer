@@ -1,0 +1,80 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Sprites/Inventory.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Main/Game/GameUI/InventoryUI/InventoryUi.cs" type="Script" id=2]
+[ext_resource path="res://Scenes/Game/GameUI/InventoryUI/InventorySlot_OLD.tscn" type="PackedScene" id=3]
+
+[node name="InventoryUI_OLD" type="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+_slotParentNodePath = NodePath("../InventoryUI_OLD/TextureRect")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 64.0
+margin_top = 152.0
+margin_right = 256.0
+margin_bottom = 182.0
+rect_min_size = Vector2( 192, 30 )
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InventorySlot" parent="TextureRect" instance=ExtResource( 3 )]
+_stackAmountLabelNodePath = NodePath("../../../InventoryUI_OLD/TextureRect/InventorySlot/StackAmount")
+
+[node name="InventorySlot2" parent="TextureRect" instance=ExtResource( 3 )]
+margin_left = 25.0
+margin_right = 41.0
+_stackAmountLabelNodePath = NodePath("../../../InventoryUI_OLD/TextureRect/InventorySlot2/StackAmount")
+
+[node name="InventorySlot3" parent="TextureRect" instance=ExtResource( 3 )]
+margin_left = 43.0
+margin_right = 59.0
+_stackAmountLabelNodePath = NodePath("../../../InventoryUI_OLD/TextureRect/InventorySlot3/StackAmount")
+
+[node name="InventorySlot4" parent="TextureRect" instance=ExtResource( 3 )]
+margin_left = 61.0
+margin_right = 77.0
+_stackAmountLabelNodePath = NodePath("../../../InventoryUI_OLD/TextureRect/InventorySlot4/StackAmount")
+
+[node name="InventorySlot5" parent="TextureRect" instance=ExtResource( 3 )]
+margin_left = 79.0
+margin_right = 95.0
+_stackAmountLabelNodePath = NodePath("../../../InventoryUI_OLD/TextureRect/InventorySlot5/StackAmount")
+
+[node name="InventorySlot6" parent="TextureRect" instance=ExtResource( 3 )]
+margin_left = 97.0
+margin_right = 113.0
+_stackAmountLabelNodePath = NodePath("../../../InventoryUI_OLD/TextureRect/InventorySlot6/StackAmount")
+
+[node name="InventorySlot7" parent="TextureRect" instance=ExtResource( 3 )]
+margin_left = 115.0
+margin_right = 131.0
+_stackAmountLabelNodePath = NodePath("../../../InventoryUI_OLD/TextureRect/InventorySlot7/StackAmount")
+
+[node name="InventorySlot8" parent="TextureRect" instance=ExtResource( 3 )]
+margin_left = 133.0
+margin_right = 149.0
+_stackAmountLabelNodePath = NodePath("../../../InventoryUI_OLD/TextureRect/InventorySlot8/StackAmount")
+
+[node name="InventorySlot9" parent="TextureRect" instance=ExtResource( 3 )]
+margin_left = 151.0
+margin_right = 167.0
+_stackAmountLabelNodePath = NodePath("../../../InventoryUI_OLD/TextureRect/InventorySlot9/StackAmount")
+
+[node name="InventorySlot10" parent="TextureRect" instance=ExtResource( 3 )]
+margin_left = 169.0
+margin_right = 185.0
+_stackAmountLabelNodePath = NodePath("../../../InventoryUI_OLD/TextureRect/InventorySlot10/StackAmount")

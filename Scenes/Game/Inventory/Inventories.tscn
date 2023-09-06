@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/Main/Game/Inventories/InventoryManager.cs" type="Script" id=1]
+[ext_resource path="res://Scenes/Game/GameUI/InventoryUI/InventoriesCanvas.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Game/GameUI/InventoryUI/MouseMoveItem.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Game/Inventory/PlayerInventory.tscn" type="PackedScene" id=4]
+
+[node name="Inventories" type="Control"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+_mouseMoveItemIconPackedScene = ExtResource( 3 )
+_playerInventoryNodePath = NodePath("PlayerInventory")
+
+[node name="PlayerInventory" parent="." instance=ExtResource( 4 )]
+
+[node name="InventoriesCanvas" parent="." instance=ExtResource( 2 )]
+
+[editable path="InventoriesCanvas"]

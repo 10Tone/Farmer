@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Sprites/Plant_Collectible.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Main/Game/Database/ItemResource.cs" type="Script" id=2]
+
+[resource]
+script = ExtResource( 2 )
+itemName = "Plant"
+itemId = 0
+stackable = true
+stackAmount = 1
+maxStackSize = 99
+energyBoostAmount = 10
+itemType = 3
+iconTexture = ExtResource( 1 )

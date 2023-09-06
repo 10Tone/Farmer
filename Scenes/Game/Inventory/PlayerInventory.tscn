@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/Main/Game/Inventories/PlayerInventory.cs" type="Script" id=1]
+[ext_resource path="res://Scenes/Game/GameUI/InventoryUI/PlayerInventoryUi.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Game/GameUI/InventoryUI/HotbarUi.tscn" type="PackedScene" id=3]
+
+[node name="PlayerInventory" type="Node2D"]
+script = ExtResource( 1 )
+_inventoryUiScene = ExtResource( 2 )
+_hotbarUiNodePath = NodePath("CanvasLayer/HotbarUi")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 0
+
+[node name="HotbarUi" parent="CanvasLayer" instance=ExtResource( 3 )]
+margin_top = -32.0
+[connection signal="ready" from="." to="CanvasLayer/HotbarUi" method="_on_PlayerInventory_ready"]
