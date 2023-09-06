@@ -6,4 +6,6 @@
 
 ### Code, gameplay design and art by Ruurt Staverman.
 
-https://github.com/10Tone/Farmer_GitHub_Repo/assets/69433105/11b73e33-1882-4272-ac40-c34359595fe8
+https://github.com/10Tone/Farmer/assets/69433105/f05154b0-feb2-48cf-87ae-71a428de7cc4
+
+
